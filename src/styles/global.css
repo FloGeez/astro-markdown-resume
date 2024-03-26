@@ -1,0 +1,86 @@
+:root {
+    --cv-max-width: 880px;
+    --background-color: #ffffff;
+    --second-background-color: rgb(0 32 82 / 5%);
+    --text-color: #13151a;
+    --title-color: #2f323a;
+    --background-color-element: #ffffff;
+    --border-color-element: rgba(17, 32, 40, 0.15);
+    --accent: 231, 45, 49;
+    --accent-light: 241 146 46;
+    --accent-gradient: linear-gradient(45deg,
+            rgba(var(--accent)),
+            rgba(var(--accent-light)) 30%,
+            var(--background-color-element) 60%);
+
+    --primary-text: #6474a2;
+    --title-text: #283044;
+    --primary-accent: #ee2f33;
+    --secondary-accent: #b24f64;
+    --tertiary-accent: #d61039;
+}
+
+.dark {
+    --background-color: #08080a;
+    --second-background-color: rgb(0 166 255 / 3%);
+    --text-color: #ffffff;
+    --title-color: #535865;
+    --background-color-element: #020303;
+    --border-color-element: rgba(255, 255, 255, 0.1);
+
+    --primary-text: #a3acc2;
+    --title-text: #b3bacb;
+    --primary-accent: #f2642a;
+    --secondary-accent: #b24f4f;
+    --tertiary-accent: #cb5c44;
+}
+
+
+html {
+    font-family: "Inter Variable", sans-serif;
+    background: var(--background-color);
+    background-size: 224px;
+    color: var(--text-color);
+}
+
+html,
+body {
+    font-family: "Inter Variable", sans-serif;
+}
+
+body {
+    background: linear-gradient(60deg,
+            var(--background-color) 20%,
+            var(--second-background-color) 60%,
+            var(--background-color) 100%);
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+main {
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* scrollbar */
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6a6e78;
+    border: 4px solid transparent;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #757c8b;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #979ca9;
+}
