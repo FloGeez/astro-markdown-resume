@@ -3,15 +3,24 @@
 import "@fontsource-variable/inter";
 import "@fontsource/fira-mono";
 import "../styles/global.css";
-import ThemeSwitch from "../components/ThemeSwitch.astro";
+import CVHeader from "../components/CVHeader.astro";
+import Footer from "../components/Footer.astro";
+
+interface Links {
+  github: string;
+}
 
 interface Props {
   frontmatter: {
     title: string;
+    jobTitle: string;
+    about: string;
+    links: Links
   };
 }
 
-const { title } = Astro.props.frontmatter;
+const { title, jobTitle, about, links } = Astro.props.frontmatter;
+
 ---
 
 <!doctype html>
@@ -26,11 +35,7 @@ const { title } = Astro.props.frontmatter;
   </head>
   <body>
     <main>
-      <header>
-        <div class="theme-switch">
-          <ThemeSwitch />
-        </div>
-      </header>
+      <CVHeader />
       <section>
         <div class="wrapper">
           <article class="cv">
@@ -39,13 +44,10 @@ const { title } = Astro.props.frontmatter;
         </div>
       </section>
     </main>
+    <Footer />
   </body>
 </html>
 <style is:inline>
-  .theme-switch {
-    margin: 6px 12px 12px;
-    text-align: right;
-  }
   .wrapper {
     position: relative;
     margin: auto;
@@ -115,24 +117,24 @@ const { title } = Astro.props.frontmatter;
     );
     width: fit-content;
     position: relative;
-    font-size: 2.25rem;
+    font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin: 2em auto 2em;
+    margin: 2.5em auto 2.5em;
   }
 
   hr + h2 {
-    margin: -2em auto 2em;
+    margin: -2em auto 2.5em;
   }
 
   h3 {
     color: var(--title-text);
-    font-size: 1.125em;
+    font-size: 1.25em;
     line-height: 1.5;
     position: relative;
     display: block;
     margin: 1.5em 0px 0px;
-    padding: 0px 4px 4px 3em;
+    padding: 0 4px 4px 48px;
     box-sizing: border-box;
   }
 
@@ -144,7 +146,7 @@ const { title } = Astro.props.frontmatter;
     height: 12px;
     border-radius: 50%;
     left: 12px;
-    top: 0.5rem;
+    top: 0.5em;
     background-image: linear-gradient(
       to left top,
       var(--primary-text),
@@ -160,7 +162,7 @@ const { title } = Astro.props.frontmatter;
     height: 2px;
     border-radius: 6px;
     left: 7px;
-    top: 0.85rem;
+    top: 0.8em;
     background-image: linear-gradient(
       to left top,
       var(--primary-text),
@@ -185,7 +187,7 @@ const { title } = Astro.props.frontmatter;
     position: relative;
     margin: 0 0 4px 0;
     vertical-align: top;
-    padding: 8px 4px 4px 3em;
+    padding: 8px 4px 4px 48px;
     box-sizing: border-box;
   }
 
@@ -196,7 +198,8 @@ const { title } = Astro.props.frontmatter;
     position: relative;
     font-family: "Fira Mono", monospace;
     letter-spacing: 0.1em;
-    font-size: 0.9em;
+    font-size: 0.8em;
+    top: 4px;
     font-weight: 500;
     -webkit-background-clip: text;
     background-clip: text;
@@ -235,7 +238,7 @@ const { title } = Astro.props.frontmatter;
     will-change: filter;
     height: 150px;
   }
-  @media (max-width: var(--cv-max-width)) {
+  @media (max-width: 1000px) {
     hr {
       left: -3rem;
     }

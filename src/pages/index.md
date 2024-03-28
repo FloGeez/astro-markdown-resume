@@ -1,10 +1,17 @@
 ---
 pubDate: 2023-10-26T15:50:17.737Z
-title: John Doe - Resume
+title: Florian Etourneau - Resume
+name: Florian Etourneau
+jobTitle: Full Stack Developer
+about: |
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis atque quia omnis consectetur, voluptas praesentium veniam blanditiis ratione asperiores accusantium laborum odit commodi quis deserunt incidunt et dolor iure ut!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quia, doloribus ut beatae perspiciatis voluptatibus.
+links:
+    github: github.com/FloGeez
 layout: ../layouts/CV.astro
 ---
 
-# John Doe
+# Florian Etourneau
 
 **Full Stack Developer**
 
@@ -77,7 +84,11 @@ Lorem ipsum, Dolor sit amet, Consectetur
 
 ### Frameworks & Libraries
 
-Adipiscing elit, Eiusmod tempor, Incididunt ut labore
+**Adipiscing elit** : Nullam varius, turpis et commodo pharetra,
+
+**Eiusmod tempor** : Integer in mauris, eu nibh, euismod gravida,
+
+**Incididunt ut labore**: Donec, lobortis, risus, a elit
 
 ### Tools & Platforms
 
@@ -92,6 +103,7 @@ Et dolore magna, Aliqua Ut enim, Minim veniam
 Fluent
 
 ### French
+
 Native
 
 ---
