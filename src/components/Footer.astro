@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import heartIcon from "../assets/heart.ico";
+---
+
+<footer>
+  <div class="heart">
+    <Image src={heartIcon} alt="Heart Icon" width="16" height="16"/>
+  </div>
+</footer>
+<style>
+  footer {
+    padding: 32px;
+    font-size: 12px;
+    text-align: center;
+  }
+</style>
